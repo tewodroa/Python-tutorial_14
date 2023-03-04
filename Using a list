@@ -1,0 +1,28 @@
+
+list=[]
+
+
+while True:
+    selection={1,2,3}
+    print('Would you like to\n(1)Add or\n(2)Remove items or\n(3)Quit?:')
+    selection=input()
+  
+    if selection=='1':
+        product=input('What will be added?:')
+        list.append(product)
+      
+    elif selection=='2':
+        print('There are',len(list),'items in the list.')
+        x=int(input('Which item is deleted?:'))
+        if x in range(len(list)):
+             list.remove(list[x])
+        else:
+            print('Incorrect selection.')
+               
+    elif selection=='3':
+        print('The following items remain in the list:')
+        for i in list:
+            print(i)
+        break
+    else:
+        print('Incorrect selection.')
